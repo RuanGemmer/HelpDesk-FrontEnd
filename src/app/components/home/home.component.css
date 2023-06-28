@@ -1,0 +1,14 @@
+.card{
+    width: 90%;
+    margin: auto;
+    background-color: rgb(240,240,240);
+}
+
+img{
+    height: 20rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    text-align: justify;
+}

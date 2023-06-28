@@ -20,10 +20,6 @@ img {
     margin-right: 0.7rem;
 }
 
-.nav-list a.mat-mdc-list-item-unscoped-content {
-    color: white !important;
-  }
-
 .menu{
     margin: 1rem 0 0 1rem;
     color: white;
