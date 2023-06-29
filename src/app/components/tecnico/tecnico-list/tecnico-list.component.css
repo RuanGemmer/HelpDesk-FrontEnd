@@ -3,6 +3,20 @@
     margin: 1rem auto;
 }
 
+h1{
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    width: 100%;
+    margin: 2rem 0;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
 table {
     width: 100%;
   }
