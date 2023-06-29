@@ -1,0 +1,51 @@
+.tela{
+    width: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.container{
+    width: 30rem;
+    margin: auto;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border-radius: .6rem;
+}
+
+.full-width{
+    width: 100%;
+}
+
+h1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    margin: .3rem;
+}
+
+img{
+    height: 8rem;
+    width: 100%;
+    margin: auto;
+}
+
+.section{
+    margin: 0.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-cancel{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 0.5rem;
+    opacity: 0.5;
+}
