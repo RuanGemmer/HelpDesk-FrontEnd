@@ -15,7 +15,10 @@
                 placeholder="Ex. 123">
         </mat-form-field>
 
-        <button [disabled]="!validaCampos()" mat-stroked-button>
+        <button 
+        (click)="logar()"
+        [disabled]="!validaCampos()" 
+        mat-stroked-button>
             <span>Acessar</span>
         </button>
     </form>

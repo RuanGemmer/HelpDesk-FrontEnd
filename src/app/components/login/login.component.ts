@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { credenciais } from 'src/app/models/credenciais';
 
 @Component({
@@ -14,8 +15,15 @@ export class LoginComponent {
     senha: ''
   }
 
+  constructor(private toast: ToastrService){}
+
   email = new FormControl(null, Validators.email);
   senha = new FormControl(null, Validators.minLength(3));
+
+logar(){
+  this.toast.error('Usuário e/ou Senha inválido(s)!', 'Erro de Login');
+  this.creds.senha = '';
+}
 
   validaCampos(): boolean {
     if (this.email.valid && this.senha.valid) {
