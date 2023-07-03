@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { Chamado } from 'src/app/models/chamado';
 
 @Component({
   selector: 'app-chamado-list',
@@ -7,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class ChamadoListComponent {
 
+  ELEMENT_DATA: Chamado[] = [
+
+  ]
+  displayedColumns: string[] = ['id', 'titulo', 'nomeCliente', 'nomeTecnico','dataAbertura', 'prioridade', 'status', 'actions'];
+  dataSource = new MatTableDataSource<Chamado>(this.ELEMENT_DATA);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 }

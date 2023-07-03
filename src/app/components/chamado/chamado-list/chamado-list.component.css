@@ -1,0 +1,41 @@
+.container {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+mat-radio-group{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+mat-radio-button{
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.edit{
+    color: rgba(0, 155, 255, 1);
+    margin-right: 1rem;
+}
+
+.delete{
+    color: red;
+}
