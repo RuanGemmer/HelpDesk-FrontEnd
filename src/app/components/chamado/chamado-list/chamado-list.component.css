@@ -36,6 +36,6 @@ table {
     margin-right: 1rem;
 }
 
-.delete{
-    color: red;
+.visualizar{
+    color: rgba(0, 69, 203, 1)
 }
