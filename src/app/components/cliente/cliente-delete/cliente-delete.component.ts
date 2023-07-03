@@ -18,8 +18,7 @@ export class ClienteDeleteComponent {
     cpf: '',
     email: '',
     senha: '',
-    perfis: [],
-    dataCriacao: ''
+    perfis: []
   }
 
   constructor(
@@ -29,15 +28,32 @@ export class ClienteDeleteComponent {
     private route: ActivatedRoute
   ) { }
 
+  isAdminChecked: boolean = false;
+  isClientChecked: boolean = false;
+  isTecnicChecked: boolean = false;
+
   ngOnInit(): void {
     this.cliente.id = this.route.snapshot.paramMap.get('id');
     this.findById();
   }
 
   findById(): void {
-    this.service.finById(this.cliente.id).subscribe(resposta =>{
-      resposta.perfis = [];
+    this.service.finById(this.cliente.id).subscribe(resposta => {
       this.cliente = resposta;
+      this.isAdminChecked = this.cliente.perfis.includes('ADMIN');
+      this.isClientChecked = this.cliente.perfis.includes('CLIENTE');
+      this.isTecnicChecked = this.cliente.perfis.includes('TECNICO');
+      this.cliente.perfis = [];
+
+      if (this.isAdminChecked) {
+        this.cliente.perfis.push('0');
+      }
+      if (this.isClientChecked) {
+        this.cliente.perfis.push('1');
+      }
+      if (this.isTecnicChecked) {
+        this.cliente.perfis.push('2');
+      }
     })
   }
 

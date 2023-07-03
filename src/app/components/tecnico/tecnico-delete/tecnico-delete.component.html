@@ -5,13 +5,16 @@
             <img src="assets/img/tecnico-create.svg" alt="Imagem novo técnico">
 
             <section class="section">
-                <mat-checkbox class="margin" color="primary" [disabled]="true">
+                <mat-checkbox [(ngModel)]="isAdminChecked"
+                name="admin" class="margin" color="primary" [disabled]="true">
                     Administrador
                 </mat-checkbox>
-                <mat-checkbox class="margin" color="primary" [disabled]="true">
+                <mat-checkbox [(ngModel)]="isClientChecked"
+                name="client" class="margin" color="primary" [disabled]="true">
                     Cliente
                 </mat-checkbox>
-                <mat-checkbox  class="margin" color="primary" [disabled]="true">
+                <mat-checkbox [(ngModel)]="isTecnicChecked"
+                name="tecnic" class="margin" color="primary" [disabled]="true">
                     Técnico
                 </mat-checkbox>
             </section>

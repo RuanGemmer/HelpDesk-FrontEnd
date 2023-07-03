@@ -18,8 +18,7 @@ export class TecnicoDeleteComponent {
     cpf: '',
     email: '',
     senha: '',
-    perfis: [],
-    dataCriacao: ''
+    perfis: []
   }
 
   constructor(
@@ -29,6 +28,10 @@ export class TecnicoDeleteComponent {
     private route: ActivatedRoute
   ) { }
 
+  isAdminChecked: boolean = false;
+  isClientChecked: boolean = false;
+  isTecnicChecked: boolean = false;
+
   ngOnInit(): void {
     this.tecnico.id = this.route.snapshot.paramMap.get('id');
     this.findById();
@@ -36,8 +39,21 @@ export class TecnicoDeleteComponent {
 
   findById(): void {
     this.service.finById(this.tecnico.id).subscribe(resposta =>{
-      resposta.perfis = [];
       this.tecnico = resposta;
+      this.isAdminChecked = this.tecnico.perfis.includes('ADMIN');
+      this.isClientChecked = this.tecnico.perfis.includes('CLIENTE');
+      this.isTecnicChecked = this.tecnico.perfis.includes('TECNICO');
+      this.tecnico.perfis = [];
+
+      if (this.isAdminChecked) {
+        this.tecnico.perfis.push('0');
+      }
+      if (this.isClientChecked) {
+        this.tecnico.perfis.push('1');
+      }
+      if (this.isTecnicChecked) {
+        this.tecnico.perfis.push('2');
+      }
     })
   }
 

@@ -17,9 +17,12 @@ export class ClienteUpdateComponent {
     cpf: '',
     email: '',
     senha: '',
-    perfis: [],
-    dataCriacao: ''
+    perfis: []
   }
+
+  isAdminChecked: boolean = false;
+  isClientChecked: boolean = false;
+  isTecnicChecked: boolean = false;
 
   nome: FormControl = new FormControl(null,
     [Validators.required,
@@ -49,8 +52,21 @@ export class ClienteUpdateComponent {
 
   findById(): void {
     this.service.finById(this.cliente.id).subscribe(resposta =>{
-      resposta.perfis = [];
       this.cliente = resposta;
+      this.isAdminChecked = this.cliente.perfis.includes('ADMIN');
+      this.isClientChecked = this.cliente.perfis.includes('CLIENTE');
+      this.isTecnicChecked = this.cliente.perfis.includes('TECNICO');
+      this.cliente.perfis = [];
+
+      if (this.isAdminChecked) {
+        this.cliente.perfis.push('0');
+      }
+      if (this.isClientChecked) {
+        this.cliente.perfis.push('1');
+      }
+      if (this.isTecnicChecked) {
+        this.cliente.perfis.push('2');
+      }
     })
   }
 
@@ -71,10 +87,28 @@ export class ClienteUpdateComponent {
   }
 
   addPerfil(perfil: any): void {
-    if (this.cliente.perfis.includes(perfil)) {
-      this.cliente.perfis.splice(this.cliente.perfis.indexOf(perfil), 1);
-    } else {
-      this.cliente.perfis.push(perfil);
+    if (perfil == 0) {
+      if (this.isAdminChecked) {
+        this.cliente.perfis.push('0');
+      } else {
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf('0'), 1);
+      }
+    }
+
+    if (perfil == 1) {
+      if (this.isClientChecked) {
+        this.cliente.perfis.push('1');
+      } else {
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf('1'), 1);
+      }
+    }
+
+    if (perfil == 2) {
+      if (this.isTecnicChecked) {
+        this.cliente.perfis.push('2');
+      } else {
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf('2'), 1);
+      }
     }
   }
 

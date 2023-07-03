@@ -17,9 +17,12 @@ export class TecnicoUpdateComponent {
     cpf: '',
     email: '',
     senha: '',
-    perfis: [],
-    dataCriacao: ''
+    perfis: []
   }
+
+  isAdminChecked: boolean = false;
+  isClientChecked: boolean = false;
+  isTecnicChecked: boolean = false;
 
   nome: FormControl = new FormControl(null,
     [Validators.required,
@@ -48,9 +51,22 @@ export class TecnicoUpdateComponent {
   }
 
   findById(): void {
-    this.service.finById(this.tecnico.id).subscribe(resposta =>{
-      resposta.perfis = [];
+    this.service.finById(this.tecnico.id).subscribe(resposta => {
       this.tecnico = resposta;
+      this.isAdminChecked = this.tecnico.perfis.includes('ADMIN');
+      this.isClientChecked = this.tecnico.perfis.includes('CLIENTE');
+      this.isTecnicChecked = this.tecnico.perfis.includes('TECNICO');
+      this.tecnico.perfis = [];
+
+      if (this.isAdminChecked) {
+        this.tecnico.perfis.push('0');
+      }
+      if (this.isClientChecked) {
+        this.tecnico.perfis.push('1');
+      }
+      if (this.isTecnicChecked) {
+        this.tecnico.perfis.push('2');
+      }
     })
   }
 
@@ -71,12 +87,31 @@ export class TecnicoUpdateComponent {
   }
 
   addPerfil(perfil: any): void {
-    if (this.tecnico.perfis.includes(perfil)) {
-      this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil), 1);
-    } else {
-      this.tecnico.perfis.push(perfil);
+    if (perfil == 0) {
+      if (this.isAdminChecked) {
+        this.tecnico.perfis.push('0');
+      } else {
+        this.tecnico.perfis.splice(this.tecnico.perfis.indexOf('0'), 1);
+      }
+    }
+
+    if (perfil == 1) {
+      if (this.isClientChecked) {
+        this.tecnico.perfis.push('1');
+      } else {
+        this.tecnico.perfis.splice(this.tecnico.perfis.indexOf('1'), 1);
+      }
+    }
+
+    if (perfil == 2) {
+      if (this.isTecnicChecked) {
+        this.tecnico.perfis.push('2');
+      } else {
+        this.tecnico.perfis.splice(this.tecnico.perfis.indexOf('2'), 1);
+      }
     }
   }
+
 
   validaCampos(): boolean {
     return this.nome.valid

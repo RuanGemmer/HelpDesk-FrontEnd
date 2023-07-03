@@ -6,21 +6,27 @@
 
             <section class="section">
                 <mat-checkbox 
-                (click)="addPerfil(0)"
-                class="margin"
-                 color="primary">Administrador
+                [(ngModel)]="isAdminChecked" 
+                (click)="addPerfil(0)" 
+                class="margin" 
+                color="primary" 
+                name="admin">Administrador
                 </mat-checkbox>
 
                 <mat-checkbox 
-                (click)="addPerfil(1)"
+                [(ngModel)]="isClientChecked" 
+                (click)="addPerfil(1)" 
                 class="margin" 
-                color="primary">Cliente
+                color="primary" 
+                name="client">Cliente
                 </mat-checkbox>
 
                 <mat-checkbox 
-                (click)="addPerfil(2)"
+                [(ngModel)]="isTecnicChecked" 
+                (click)="addPerfil(2)" 
                 class="margin" 
-                color="primary">Técnico
+                color="primary" 
+                name="tecnic">Técnico
                 </mat-checkbox>
             </section>
 

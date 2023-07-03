@@ -18,9 +18,12 @@ export class ClienteCreateComponent {
     cpf: '',
     email: '',
     senha: '',
-    perfis: [],
-    dataCriacao: ''
+    perfis: []
   }
+  
+  isAdminChecked: boolean = false;
+  isClientChecked: boolean = true;
+  isTecnicChecked: boolean = false;
 
   nome: FormControl = new FormControl(null,
     [Validators.required,
@@ -42,6 +45,10 @@ export class ClienteCreateComponent {
     private router: Router
   ) { }
 
+  ngOnInit(): void {
+    this.cliente.perfis = ['1'];
+  }
+
   create(): void {
     this.service.create(this.cliente).subscribe(() => {
       this.toastr.success('Cliente cadastrado com sucesso', 'Cadastro');
@@ -59,10 +66,28 @@ export class ClienteCreateComponent {
   }
 
   addPerfil(perfil: any): void {
-    if (this.cliente.perfis.includes(perfil)) {
-      this.cliente.perfis.splice(this.cliente.perfis.indexOf(perfil), 1);
-    } else {
-      this.cliente.perfis.push(perfil);
+    if (perfil == 0) {
+      if (this.isAdminChecked) {
+        this.cliente.perfis.push('0');
+      } else {
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf('0'), 1);
+      }
+    }
+
+    if (perfil == 1) {
+      if (this.isClientChecked) {
+        this.cliente.perfis.push('1');
+      } else {
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf('1'), 1);
+      }
+    }
+
+    if (perfil == 2) {
+      if (this.isTecnicChecked) {
+        this.cliente.perfis.push('2');
+      } else {
+        this.cliente.perfis.splice(this.cliente.perfis.indexOf('2'), 1);
+      }
     }
   }
 
