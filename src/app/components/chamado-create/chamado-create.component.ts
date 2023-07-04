@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-chamado-create',
@@ -6,5 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./chamado-create.component.css']
 })
 export class ChamadoCreateComponent {
+
+  prioridade: FormControl = new FormControl(null, [Validators.required]);
+  status: FormControl = new FormControl(null, [Validators.required]);
+  titulo: FormControl = new FormControl(null, [Validators.required, Validators.minLength(3)]);
+  descricao: FormControl = new FormControl(null, [Validators.required, Validators.minLength(3)]);
+  tecnico: FormControl = new FormControl(null, [Validators.required]);
+  cliente: FormControl = new FormControl(null, [Validators.required]);
+
+  validaCampos(): boolean {
+    return this.prioridade.valid &&
+      this.status.valid &&
+      this.titulo.valid &&
+      this.descricao.valid &&
+      this.tecnico.valid &&
+      this.cliente.valid
+  }
 
 }
