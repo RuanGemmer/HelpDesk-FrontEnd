@@ -12,13 +12,32 @@
 
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password"
-                matInput placeholder="Ex. 123" autocomplete="off">
+            <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput
+                placeholder="Ex. 123" autocomplete="off">
             <mat-icon class="icons" matSuffix>password</mat-icon>
         </mat-form-field>
 
-        <button (click)="logar()" [disabled]="!validaCampos()" mat-stroked-button>
+        <button 
+            (click)="logar()" 
+            [disabled]="!validaCampos() && contagemIniciada" 
+            id="acessar-btn"
+            mat-stroked-button>
             <span>Acessar</span>
         </button>
     </form>
+
+    <ng-container *ngIf="primeiroClique">
+        <section>
+            <div class="container-clock">
+                <p class="title-clock">Contador Regressivo (segundos)</p>
+                <div>
+                    <h1 id="timer" class="clock">{{ contador }}</h1>
+                </div>
+                <hr>
+                <p class="center">Aguarde... Nosso servidor estava adormecido, estamos iniciando.<br>
+                    Após o término do tempo, clique em <b>ACESSAR</b> novamente</p>
+            </div>
+
+        </section>
+    </ng-container>
 </div>

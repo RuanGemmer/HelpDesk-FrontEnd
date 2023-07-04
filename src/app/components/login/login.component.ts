@@ -12,6 +12,10 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent {
 
+  contagemIniciada: boolean = false;
+  primeiroClique: boolean = false;
+  contador: number = 180;
+  
   creds: credenciais = {
     email: '',
     senha: ''
@@ -26,10 +30,14 @@ export class LoginComponent {
   senha = new FormControl(null, Validators.minLength(3));
 
   ngOnInit() {
-    this.creds = {email:'visitante@teste.com', senha: 'visitante'};
+    this.creds = { email: 'visitante@teste.com', senha: 'visitante' };
   }
 
   logar() {
+    if (!this.primeiroClique) {
+      this.primeiroClique = true;
+      this.startCountdown();
+    }
     this.service.authenticate(this.creds).subscribe(resposta => {
       this.service.sucessFullLogin(resposta.headers.get('Authorization').substring(7));
       this.router.navigate(['']);
@@ -41,4 +49,20 @@ export class LoginComponent {
   validaCampos(): boolean {
     return this.email.valid && this.senha.valid
   }
+
+  startCountdown() {
+    if (!this.contagemIniciada) {
+      this.contagemIniciada = true;
+      const countdownInterval = setInterval(() => {
+        this.contador--;
+        if (this.contador <= 0) {
+          clearInterval(countdownInterval);
+          this.contador = 0; // Para garantir que o contador exiba 0 quando terminar
+          this.contagemIniciada = false;
+        }
+      }, 1000);
+    }
+  }
+
+
 }
