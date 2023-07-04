@@ -1,0 +1,63 @@
+.tela {
+    width: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.container {
+    max-width: 50rem;
+    margin: auto;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border-radius: .6rem;
+}
+
+.status-prioridade {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-prioridade mat-form-field {
+    width: 49%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.text-area {
+    min-height: 4rem;
+    max-height: 7rem;
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: .3rem;
+}
+
+img {
+    height: 8rem;
+    width: 100%;
+    margin: auto;
+}
+
+.button-cancel {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 0.5rem;
+    opacity: 0.5;
+}
+
+mat-icon {
+    opacity: 0.4;
+}
