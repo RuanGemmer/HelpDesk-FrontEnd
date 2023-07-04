@@ -25,6 +25,10 @@ export class LoginComponent {
   email = new FormControl(null, Validators.email);
   senha = new FormControl(null, Validators.minLength(3));
 
+  ngOnInit() {
+    this.creds = {email:'visitante@teste.com', senha: 'visitante'};
+  }
+
   logar() {
     this.service.authenticate(this.creds).subscribe(resposta => {
       this.service.sucessFullLogin(resposta.headers.get('Authorization').substring(7));

@@ -78,3 +78,7 @@ button:hover {
 button:active {
     transform: scale(0.95);
 }
+
+.icons{
+    opacity: 0.5;;
+}
