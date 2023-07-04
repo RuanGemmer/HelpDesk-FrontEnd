@@ -8,7 +8,7 @@
 
 User: visitante@teste.com
 <br>
-Password: visitante
+Password: visitante746521
 <br><br>
 
 ## BackEnd
