@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
     private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.router.navigate(['chamados/update/1'])
+    this.router.navigate(['home'])
   }
 
   logout(){

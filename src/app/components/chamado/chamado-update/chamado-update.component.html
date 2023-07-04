@@ -21,7 +21,7 @@
 
             <div class="status-prioridade">
                 <mat-form-field appearance="outline">
-                    <mat-label>{{retornaStatus(chamado.status)}}</mat-label>
+                    <mat-label>Status ({{retornaStatus(chamado.status)}})</mat-label>
                     <mat-select 
                     [(ngModel)]="chamado.status"
                     name="status"
@@ -34,7 +34,7 @@
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
-                    <mat-label>{{retornaPrioridade(chamado.prioridade)}}</mat-label>
+                    <mat-label>Prioridade ({{retornaPrioridade(chamado.prioridade)}})</mat-label>
                     <mat-select 
                     [(ngModel)]="chamado.prioridade"
                     name="prioridade"
@@ -49,7 +49,7 @@
 
             <div class="tecnico">
                 <mat-form-field class="full-width" appearance="outline">
-                    <mat-label>{{chamado.nomeTecnico}}</mat-label>
+                    <mat-label>Técnico ({{chamado.nomeTecnico}})</mat-label>
                     <mat-select 
                     [(ngModel)]="chamado.tecnico"
                     name="tecnico"
@@ -69,7 +69,7 @@
 
             <div class="cliente">
                 <mat-form-field class="full-width" appearance="outline">
-                    <mat-label>{{chamado.nomeCliente}}</mat-label>
+                    <mat-label>Cliente ({{chamado.nomeCliente}})</mat-label>
                     <mat-select 
                     [(ngModel)]="chamado.cliente"
                     name="cliente"
