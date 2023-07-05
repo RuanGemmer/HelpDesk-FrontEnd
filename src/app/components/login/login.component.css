@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .container {
     height: 100%;
     display: flex;
@@ -118,5 +122,11 @@ button:active {
   
     .container-clock {
       margin-top: 1rem;
+    }
+
+    .img-login {
+        height: 5rem;
+        width: 100%;
+        margin: 0.5rem auto;
     }
   }

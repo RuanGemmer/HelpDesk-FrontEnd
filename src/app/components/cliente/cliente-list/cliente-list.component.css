@@ -1,7 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
 .container {
     width: 90%;
     margin: 1rem auto;
 }
+
+.table-container {
+    overflow: auto;
+  }
+
 
 h1 {
     width: 100%;
@@ -29,3 +38,9 @@ table {
 .delete{
     color: red;
 }
+
+@media (max-width: 800px) {
+    .table-container {
+      overflow: scroll;
+    }
+  }

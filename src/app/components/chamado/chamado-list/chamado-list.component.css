@@ -1,7 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
 .container {
     width: 90%;
     margin: 1rem auto;
 }
+
+.table-container {
+    overflow: auto;
+  }
 
 mat-radio-group{
     display: flex;
@@ -39,3 +47,14 @@ table {
 .visualizar{
     color: rgba(0, 69, 203, 1)
 }
+
+@media (max-width: 800px) {
+    .table-container {
+      overflow: scroll;
+    }
+
+    mat-radio-button{
+        font-size: 1rem;
+        margin: 0;
+    }
+  }

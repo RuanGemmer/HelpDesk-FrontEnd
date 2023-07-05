@@ -9,7 +9,7 @@
         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. João da Silva" #input>
     </mat-form-field>
 
-    <div class="mat-elevation-z8">
+    <div class="mat-elevation-z8 table-container">
         <table mat-table [dataSource]="dataSource">
 
             <ng-container matColumnDef="position">

@@ -15,7 +15,7 @@ export class LoginComponent {
   contagemIniciada: boolean = false;
   primeiroClique: boolean = false;
   contador: number = 180;
-  
+
   creds: credenciais = {
     email: '',
     senha: ''
@@ -30,7 +30,7 @@ export class LoginComponent {
   senha = new FormControl(null, Validators.minLength(3));
 
   ngOnInit() {
-    this.creds = { email: 'visitante@teste.com', senha: 'visitante' };
+    this.creds = { email: 'visitante@teste.com', senha: 'visitante746521' };
   }
 
   logar() {
