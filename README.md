@@ -55,7 +55,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Immages
-<h4>Tela de Loggin</h4>
+<h4>Login screen</h4>
 <div class="align-center">
   <a href="https://freeimage.host/i/HiiBGsa"><img src="https://iili.io/HiiBGsa.md.png" alt="HiiBGsa.md.png" border="0"></a>
 </div>
@@ -65,22 +65,22 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   <a href="https://freeimage.host/i/HiiBVqJ"><img src="https://iili.io/HiiBVqJ.md.png" alt="HiiBVqJ.md.png" border="0"></a>
 </div>
 
-<h4>Listagem de Técnicos</h4>
+<h4>List of Technicians</h4>
 <div class="align-center">
   <a href="https://freeimage.host/i/HiiBw5N"><img src="https://iili.io/HiiBw5N.md.png" alt="HiiBw5N.md.png" border="0"></a>
 </div>
 
-<h4>Atualizar Pessoa</h4>
+<h4>Update person</h4>
 <div class="align-center">
   <a href="https://freeimage.host/i/HiiBjJp"><img src="https://iili.io/HiiBjJp.md.png" alt="HiiBjJp.md.png" border="0"></a>
 </div>
 
-<h4>Listagem de Chamados com filtros</h4>
+<h4>List of Calls with filters</h4>
 <div class="align-center">
   <a href="https://freeimage.host/i/HiiBW0v"><img src="https://iili.io/HiiBW0v.md.png" alt="HiiBW0v.md.png" border="0"></a>
 </div>
 
-<h4>Edição/Abertura de chamado</h4>
+<h4>Editing/Opening a Call</h4>
 <div class="align-center">
   <a href="https://freeimage.host/i/HiiBXgR"><img src="https://iili.io/HiiBXgR.md.png" alt="HiiBXgR.md.png" border="0"></a>
 </div>
