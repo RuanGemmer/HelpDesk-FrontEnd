@@ -25,6 +25,11 @@ BackEnd made with [Spring Boot](https://github.com/spring-projects/spring-boot) 
 Database running on H2 (SQL) at runtime and [JWT](https://jwt.io) for access control.
 <br><br>
 BackEnd hosted on Render being accessed on the [link](https://helpdesk-oihd.onrender.com/).
+<br>
+
+`(PT-BR) BackEnd feito com Spring Boot versão 2.7.12 em JAVA JDK 11.
+Banco de dados rodando em H2 (SQL) em tempo de execução e JWT para controle de acesso.
+BackEnd hospedado no Render.`
 
 ## FrontEnd
 https://github.com/RuanGemmer/HelpDesk-frontEnd
@@ -41,6 +46,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Field masks were used [ngx-Mask](https://www.npmjs.com/package/ngx-mask) version 14.2.4 and to return warnings and errors from the backend to the front the component [ngx-Toastr](https://www.npmjs.com/package/ngx-toastr?activeTab=versions) version 17.0.2 was used.
 <br><br>
 The deployment was carried out at Vercel and can be accessed at the [link](https://help-desk-front-end-ruangemmer.vercel.app/login) 
+<br>
+
+`(PT-BR) Este projeto foi gerado com Angular CLI versão 16.1.2 e com componentes visuais Angular Material.
+Máscaras de campo foram usadas ngx-Mask versão 14.2.4 e para retornar avisos e erros do backend para a frente do componente ngx-Toastr versão 17.0.2 foi usada.
+A implantação foi realizada na Vercel`
 
 ## Development server
 
@@ -87,9 +97,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
  <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/RuanGemmer/HelpDesk-FrontEnd.svg?style=for-the-badge
-[contributors-url]: https://github.com/RuanGemmer/HelpDesk-FrontEnd/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/RuanGemmer/HelpDesk-FrontEnd.svg?style=for-the-badge
-[forks-url]: https://github.com/RuanGemmer/HelpDesk-FrontEnd/network/members
-[stars-shield]: https://img.shields.io/github/stars/RuanGemmer/HelpDesk-FrontEnd.svg?style=for-the-badge
-[stars-url]: https://github.com/RuanGemmer/HelpDesk-FrontEnd/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/RuanGemmer/HelpDesk-BackEnd.svg?style=for-the-badge
+[contributors-url]: https://github.com/RuanGemmer/HelpDesk-BackEnd/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/RuanGemmer/HelpDesk-BackEnd.svg?style=for-the-badge
+[forks-url]: https://github.com/RuanGemmer/HelpDesk-BackEnd/network/members
+[stars-shield]: https://img.shields.io/github/stars/RuanGemmer/HelpDesk-BackEnd.svg?style=for-the-badge
+[stars-url]: https://github.com/RuanGemmer/HelpDesk-BackEnd/stargazers
