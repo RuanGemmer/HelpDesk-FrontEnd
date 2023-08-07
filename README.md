@@ -97,9 +97,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
  <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/RuanGemmer/HelpDesk-BackEnd.svg?style=for-the-badge
-[contributors-url]: https://github.com/RuanGemmer/HelpDesk-BackEnd/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/RuanGemmer/HelpDesk-BackEnd.svg?style=for-the-badge
-[forks-url]: https://github.com/RuanGemmer/HelpDesk-BackEnd/network/members
-[stars-shield]: https://img.shields.io/github/stars/RuanGemmer/HelpDesk-BackEnd.svg?style=for-the-badge
-[stars-url]: https://github.com/RuanGemmer/HelpDesk-BackEnd/stargazers
+[contributors-shield]: https://img.shields.io/github/contributors/RuanGemmer/HelpDesk-FrontEnd.svg?style=for-the-badge
+[contributors-url]: https://github.com/RuanGemmer/HelpDesk-FrontEnd/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/RuanGemmer/HelpDesk-FrontEnd.svg?style=for-the-badge
+[forks-url]: https://github.com/RuanGemmer/HelpDesk-FrontEnd/network/members
+[stars-shield]: https://img.shields.io/github/stars/RuanGemmer/HelpDesk-FrontEnd.svg?style=for-the-badge
+[stars-url]: https://github.com/RuanGemmer/HelpDesk-FrontEnd/stargazers
